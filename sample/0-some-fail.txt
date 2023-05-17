@@ -1,0 +1,16 @@
+# Start the Server and UserNodes
+start Server a b c d
+
+wait 1000 # Wait for Nodes to come up
+
+# Introduce delay and message drop for next commit
+setDelay a Server 4000
+setDelay Server b -1
+
+commit composites/1.jpg a:1.jpg a:2.jpg b:3.jpg b:4.jpg
+wait 10000 # Wait 1000 ms for the commit to finish.
+
+setDelay a Server 0
+setDelay Server b 0
+commit composites/1.jpg a:1.jpg a:2.jpg b:3.jpg b:4.jpg
+wait 20000

@@ -1,0 +1,18 @@
+Testing:
+clear; cd ..; make clean; make all; rm -r test; tar -xvf test.tar; cd test; java Project4 15213 scripts/1-simple-commits.txt
+cd ..; rm -r test; tar -xvf test.tar; cd test; clear;
+cd ..; make clean; make all; cd test;
+
+cd ..; make clean; make all; cd test; java Project4 15213 scripts/3-dropped-message.txt
+
+Environment:
+cd sample; export CLASSPATH=$PWD:$PWD/../lib; 
+
+Submission:
+tar cvzf ../mysolution.tgz Makefile Server.java UserNode.java
+
+Untar:
+Documentation:
+file:///Users/hamzakhalid/Desktop/doc/index-all.html
+
+tar cvzf ../cp24.tgz Makefile Server.java UserNode.java RequestResponseMessage.java MessageType.java RecoveryManager.java design_document.pdf
